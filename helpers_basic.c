@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   helpers_basic.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 11:55:11 by josjimen          #+#    #+#             */
-/*   Updated: 2025/12/16 18:02:22 by josjimen         ###   ########.fr       */
+/*   Created: 2025/12/16 16:42:33 by josjimen          #+#    #+#             */
+/*   Updated: 2025/12/16 18:02:12 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*ft_lstlast(t_node	*lst)
+int	stack_size(t_node	*stack)
 {
-	if (lst == NULL)
-		return (NULL);
-	while (lst->nx != NULL)
-		lst = lst->nx;
-	return (lst);
+	int	i;
+	
+	if (!stack)
+		return (0);
+	i = 0;
+	while (stack != NULL)
+	{
+		stack = stack->nx;
+		i++;
+	}
+	return (i);
+}
+
+int	is_sorted(t_node	*stack)
+{
+	if (!stack)
+		return (1);
+	while (stack != NULL && stack->nx != NULL)
+	{
+		if (stack->ind > stack->nx->ind)
+			return (0);
+		stack = stack->nx;
+	}
+	return (1);
 }

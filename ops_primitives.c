@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 16:24:08 by josjimen          #+#    #+#             */
-/*   Updated: 2025/12/12 17:56:08 by josjimen         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:01:48 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	swap_top(t_node	**stack)
 	t_node	*first;
 	t_node	*second;
 
-	if ( !stack || !*stack || !(*stack)->next)
+	if ( !stack || !*stack || !(*stack)->nx)
 		return ;
 	first = *stack;
-	second = first->next;
-	first->next = second->next;
-	second->next = first;
+	second = first->nx;
+	first->nx = second->nx;
+	second->nx = first;
 	*stack = second;
 }
 
@@ -33,8 +33,8 @@ void	push(t_node **src, t_node **dst)
 	if (!src || !*src || !dst)
 		return ;
 	node = *src;
-	*src = (*src)->next;
-	node->next = *dst;
+	*src = (*src)->nx;
+	node->nx = *dst;
 	*dst = node;	
 }
 
@@ -43,13 +43,13 @@ void	rotate_stack(t_node **stack)
 	t_node	*first;
 	t_node	*last;
 
-	if (!stack || !*stack || !(*stack)->next)
+	if (!stack || !*stack || !(*stack)->nx)
 		return ;
 	first = *stack;
-	*stack = first->next;
-	first->next = NULL;
+	*stack = first->nx;
+	first->nx = NULL;
 	last = ft_lstlast(*stack);
-	last->next = first;
+	last->nx = first;
 }
 
 void	r_rotate_stack(t_node **stack)
@@ -57,16 +57,16 @@ void	r_rotate_stack(t_node **stack)
 	t_node	*last;
 	t_node	*prev;
 	
-	if (!stack || !*stack || !(*stack)->next)
+	if (!stack || !*stack || !(*stack)->nx)
 		return ;
 	prev = NULL;
 	last = *stack;
-	while (last->next)
+	while (last->nx)
 	{
 		prev = last;
-		last = last->next;
+		last = last->nx;
 	}
-	prev->next = NULL;
-	last->next = *stack;
+	prev->nx = NULL;
+	last->nx = *stack;
 	*stack = last;
 }
