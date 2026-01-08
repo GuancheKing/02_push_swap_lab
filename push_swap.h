@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2025/12/16 18:01:35 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/08 20:05:26 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 //int	push_swap
 
 /* ===== Structure ===== */
-typedef	struct s_node
+typedef struct s_node
 {
 	int				val;
 	int				ind;
@@ -33,6 +33,10 @@ void	rotate_stack(t_node **stack);
 void	r_rotate_stack(t_node **stack);
 
 /* ===== Helpers ===== */
-t_node	*ft_lstlast(t_node	*lst);
+t_node	*ft_lstlast(t_node *lst);
+int		stack_size(t_node *stack);
+int		is_sorted(t_node *stack);
+int		exists_in_range(t_node *a_stack, int low, int high);
+int		pos_first_in_range_from_top(t_node *a_stack, int low, int high);
 
 #endif
