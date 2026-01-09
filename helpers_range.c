@@ -6,9 +6,11 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:42:33 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/09 12:45:32 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:09:29 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*range helpers for K-sort*/
 
 #include "push_swap.h"
 
