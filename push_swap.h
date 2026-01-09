@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/08 20:05:26 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/09 12:48:30 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int		stack_size(t_node *stack);
 int		is_sorted(t_node *stack);
 int		exists_in_range(t_node *a_stack, int low, int high);
 int		pos_first_in_range_from_top(t_node *a_stack, int low, int high);
+int		pos_first_in_range_from_bot(t_node *a_stack, int low, int high);
 
 #endif
