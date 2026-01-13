@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 18:39:18 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/13 18:52:36 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/13 23:38:19 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ra(t_node **a)
 {
 	if (!a || !*a || !(*a)->nx)
-		return;
+		return ;
 	rotate_stack(a);
 	write(1, "ra\n", 3);
 }
@@ -23,7 +23,7 @@ void	ra(t_node **a)
 void	rb(t_node **b)
 {
 	if (!b || !*b || !(*b)->nx)
-		return;
+		return ;
 	rotate_stack(b);
 	write(1, "rb\n", 3);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ops_swap.c                                         :+:      :+:    :+:   */
+/*   ops_wrap_swap.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 16:33:48 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/13 17:49:15 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/13 23:38:35 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	sa(t_node **a)
 {
 	if (!a || !*a || !(*a)->nx)
-		return;
+		return ;
 	swap_top(a);
 	write(1, "sa\n", 3);
 }
@@ -23,7 +23,7 @@ void	sa(t_node **a)
 void	sb(t_node **b)
 {
 	if (!b || !*b || !(*b)->nx)
-		return;
+		return ;
 	swap_top(b);
 	write(1, "sb\n", 3);
 }
@@ -31,7 +31,7 @@ void	sb(t_node **b)
 void	ss(t_node **a, t_node **b)
 {
 	int	flag;
-	
+
 	flag = 0;
 	if (a && *a && (*a)->nx)
 	{

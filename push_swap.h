@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/10 23:05:29 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/13 23:39:38 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ void	swap_top(t_node **stack);
 void	push(t_node **src, t_node **dst);
 void	rotate_stack(t_node **stack);
 void	r_rotate_stack(t_node **stack);
+
+/*===== Wrapper Ops =====*/
 
 /* ===== Helpers ===== */
 t_node	*ft_lstlast(t_node *lst);

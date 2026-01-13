@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 18:06:54 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/13 18:58:16 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/13 23:37:31 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	pa(t_node **a, t_node **b)
 {
-	if (!b || !*b || !a || !*a)
-		return;
+	if (!b || !*b || !a)
+		return ;
 	push(b, a);
 	write(1, "pa\n", 3);
 }
 
 void	pb(t_node **a, t_node **b)
 {
-	if (!a || !*a || !b || !*b)
-		return;
+	if (!a || !*a || !b)
+		return ;
 	push(a, b);
 	write(1, "pb\n", 3);
 }
