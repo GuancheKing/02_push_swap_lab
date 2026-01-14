@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/13 23:39:38 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/14 18:56:11 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ typedef struct s_node
 	struct s_node	*nx;	
 }					t_node;
 
+typedef	struct s_range
+{
+	int	low;
+	int	high;
+	int	mid;
+}					t_range;
+
 /* ===== Primitives Ops ======*/
 void	swap_top(t_node **stack);
 void	push(t_node **src, t_node **dst);
@@ -33,6 +40,20 @@ void	rotate_stack(t_node **stack);
 void	r_rotate_stack(t_node **stack);
 
 /*===== Wrapper Ops =====*/
+void	pa(t_node **a, t_node **b);
+void	pb(t_node **a, t_node **b);
+void	rra(t_node **a);
+void	rrb(t_node **b);
+void	rrr(t_node **a, t_node **b);
+void	ra(t_node **a);
+void	rb(t_node **b);
+void	rr(t_node **a, t_node **b);
+void	sa(t_node **a);
+void	sb(t_node **b);
+void	ss(t_node **a, t_node **b);
+
+/* ===== Sorting Helpers ===== */
+void	k_push_chunks(t_node **a, t_node **b, int n, int k);
 
 /* ===== Helpers ===== */
 t_node	*ft_lstlast(t_node *lst);
