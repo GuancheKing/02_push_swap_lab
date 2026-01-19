@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:42:33 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/09 12:45:10 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/19 14:15:40 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,18 @@ int	is_sorted(t_node *stack)
 		stack = stack->nx;
 	}
 	return (1);
+}
+
+int	square_root(int number)
+{
+	int	i;
+	
+	if (number <= 1)
+		return (1);
+	i = 1;
+	while (i * i <= number)
+	{
+		i++;
+	}
+	return (i - 1);
 }

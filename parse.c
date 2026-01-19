@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_k.c                                           :+:      :+:    :+:   */
+/*   parse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/10 21:21:10 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 14:17:18 by josjimen         ###   ########.fr       */
+/*   Created: 2026/01/19 14:22:20 by josjimen          #+#    #+#             */
+/*   Updated: 2026/01/19 14:34:44 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	choose_k(int n)
+int	parse_args(int argc, char **argv, t_node **a)
 {
-	int	k;
-
-	k = square_root(n) * 7 / 5;
-	return (k);
+	
 }
 
-void	sort_k(t_node **a, t_node **b)
+int	process_arg_strings(char *s, t_node **a)
 {
-	int	n;
-	int	k;
-
-	n = stack_size(*a);
-	k = choose_k(n);
-	k_push_chunks(a, b, n, k);
-	k_pull_back(a, b);
+	
 }

@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 13:02:56 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/19 14:46:30 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h> 
 # include <limits.h>
+# include <stdlib.h>
 
 //int	push_swap
 
@@ -66,5 +67,6 @@ int		pos_first_in_range_from_top(t_node *a_stack, int low, int high);
 int		pos_first_in_range_from_bot(t_node *a_stack, int low, int high);
 int		find_max_ind(t_node *b_stack);
 int		pos_of_max_ind(t_node *b_stack, int max);
+char	**ft_split(const char *s, char c);
 
 #endif
