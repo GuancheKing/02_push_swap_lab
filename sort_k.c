@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_k_WIP.c                                       :+:      :+:    :+:   */
+/*   sort_k.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:21:10 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 12:24:30 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:57:58 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 static int	choose_k(int n)
 {
@@ -34,5 +33,4 @@ void	sort_k(t_node **a, t_node **b)
 	k = choose_k(n);
 	k_push_chunks(a, b, n, k);
 	k_pull_back(a, b);
-	return ;
 }

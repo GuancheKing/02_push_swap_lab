@@ -6,15 +6,15 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 12:17:50 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/19 13:02:56 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <unistd.h> // write
-# include <limits.h> // INT_MIN & INT_MAX
+# include <unistd.h> 
+# include <limits.h>
 
 //int	push_swap
 
@@ -26,7 +26,7 @@ typedef struct s_node
 	struct s_node	*nx;	
 }					t_node;
 
-typedef	struct s_range
+typedef struct s_range
 {
 	int	low;
 	int	high;
