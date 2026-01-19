@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/14 18:56:11 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:17:50 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void	ss(t_node **a, t_node **b);
 
 /* ===== Sorting Helpers ===== */
 void	k_push_chunks(t_node **a, t_node **b, int n, int k);
+void	k_pull_back(t_node **a, t_node **b);
+void	sort_k(t_node **a, t_node **b);
 
 /* ===== Helpers ===== */
 t_node	*ft_lstlast(t_node *lst);
