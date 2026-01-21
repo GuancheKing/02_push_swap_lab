@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 14:46:30 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 12:56:59 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ typedef struct s_range
 	int	high;
 	int	mid;
 }					t_range;
+
+/* ======Parse Utils*/
+int		append_node(t_node **a, int value);
+void	free_stack(t_node **a);
+void	free_tokens(char **tokens);
 
 /* ===== Primitives Ops ======*/
 void	swap_top(t_node **stack);
