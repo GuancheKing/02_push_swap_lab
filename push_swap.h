@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 21:48:52 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 22:47:37 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int		pos_of_max_ind(t_node *b_stack, int max);
 char	**ft_split(const char *s, char c);
 int		ft_isdigit(int c);
 long	ft_atol(const char *str);
+void	index_stack(t_node *a);
 
 #endif
