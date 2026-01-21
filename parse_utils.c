@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:12:42 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 12:55:13 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:15:02 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,33 @@ int	append_node(t_node **a, int value)
 	while (curr->nx != NULL)
 		curr = curr->nx;
 	curr->nx = new_node;
+	return (1);
+}
+
+int	is_valid_int_string(char *s)
+{
+	int	i;
+	
+	if (s == 0 || s[0] == '\0')
+		return (0);
+	if ((s[0] == '-' || s[0] == '+'))
+	{
+		if (s[1] = '\0' && ft_isdigit(s[1]) == 0)
+			return (0);
+		i = 1;
+	}
+	else
+	{
+		if (ft_isdigit(s[0]) == 0)
+			return (0);
+		i = 0;
+	}
+	while (s[i] != '\0')
+	{
+		if (ft_isdigit(s[i] == 0))
+			return (0);
+		i++;
+	}
 	return (1);
 }
 
