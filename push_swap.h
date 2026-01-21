@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 17:29:16 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:48:52 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ typedef struct s_range
 int		append_node(t_node **a, int value);
 void	free_stack(t_node **a);
 void	free_tokens(char **tokens);
+int		is_valid_int_string(char *s);
+int		is_duplicate(t_node *a, int value);
 
 /* ===== Primitives Ops ======*/
 void	swap_top(t_node **stack);
@@ -74,8 +76,6 @@ int		find_max_ind(t_node *b_stack);
 int		pos_of_max_ind(t_node *b_stack, int max);
 char	**ft_split(const char *s, char c);
 int		ft_isdigit(int c);
-int		is_valid_int_string(char *s);
-int		is_duplicate(t_node *a, int value);
 long	ft_atol(const char *str);
 
 #endif

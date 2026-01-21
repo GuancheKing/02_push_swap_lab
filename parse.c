@@ -6,13 +6,14 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 14:22:20 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 18:50:18 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 21:50:02 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	process_token(char *token, t_node **a)
+/* Validates a token and appends its integer value to stack A */
+static int	process_token(char *token, t_node **a)
 {
 	long	value;
 	if (token == NULL)
@@ -29,7 +30,8 @@ int	process_token(char *token, t_node **a)
 	return (1);
 }
 
-int	process_arg_string(char *s, t_node **a)
+/* Splits an argument string and processes each numeric token */
+static int	process_arg_string(char *s, t_node **a)
 {
 	char **tokens;
 	int 	i;
@@ -56,10 +58,23 @@ int	process_arg_string(char *s, t_node **a)
 	return (1);
 }
 
+/* Parses argv into stack A, printing Error on invalid input */
 int	parse_args(int argc, char **argv, t_node **a)
 {
-	if (argc == 1)
-		return (1);
+	int	i;
 	
+	if (argc <= 1)
+		return (1);
+	i = 1;
+	while (i < argc)
+	{
+		if (process_arg_string(argv[i], a) == 0)
+		{
+			free_stack(a);
+			write(2, "Error\n", 6);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
-
