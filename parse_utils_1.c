@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 11:12:42 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 16:15:02 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/21 17:25:57 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	free_tokens(char **tokens)
 {
 	int	i;
-	
+
 	if (tokens == NULL)
 		return ;
 	i = 0;
@@ -31,7 +31,7 @@ void	free_stack(t_node **a)
 {
 	t_node	*curr;
 	t_node	*next;
-	
+
 	if (a == NULL)
 		return ;
 	curr = *a;
@@ -70,15 +70,16 @@ int	append_node(t_node **a, int value)
 	return (1);
 }
 
+/* Checks if a string has a valid integer numeric format */
 int	is_valid_int_string(char *s)
 {
 	int	i;
-	
+
 	if (s == 0 || s[0] == '\0')
 		return (0);
 	if ((s[0] == '-' || s[0] == '+'))
 	{
-		if (s[1] = '\0' && ft_isdigit(s[1]) == 0)
+		if (s[1] == '\0' || ft_isdigit(s[1]) == 0)
 			return (0);
 		i = 1;
 	}
@@ -90,10 +91,25 @@ int	is_valid_int_string(char *s)
 	}
 	while (s[i] != '\0')
 	{
-		if (ft_isdigit(s[i] == 0))
+		if (ft_isdigit(s[i]) == 0)
 			return (0);
 		i++;
 	}
 	return (1);
 }
 
+int	is_duplicate(t_node *a, int value)
+{
+	t_node	*curr;
+
+	if (!a)
+		return (0);
+	curr = a;
+	while (curr != NULL)
+	{
+		if (curr->val == value)
+			return (1);
+		curr = curr->nx;
+	}
+	return (0);
+}
