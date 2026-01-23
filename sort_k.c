@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:21:10 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/19 14:17:18 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 14:43:40 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static int	choose_k(int n)
 	return (k);
 }
 
+/* Sorts stacks using chunk push to B and max pull back to A */
 void	sort_k(t_node **a, t_node **b)
 {
 	int	n;
