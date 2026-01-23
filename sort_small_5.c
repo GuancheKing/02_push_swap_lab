@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:29:06 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 15:15:45 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 18:10:43 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	sort_small_5(t_node **a, t_node **b)
 		to_push--;
 	}
 	sort_small_3(a);
-	if (size == 5 && *b && (*b)->nx && (*b)->ind > (*b)->nx->ind)
+	if (size == 5 && *b && (*b)->nx && (*b)->ind < (*b)->nx->ind)
 		sb(b);
 	while (*b)
 		pa(a, b);

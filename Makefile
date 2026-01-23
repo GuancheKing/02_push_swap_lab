@@ -6,17 +6,20 @@
 #    By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 18:55:35 by josjimen          #+#    #+#              #
-#    Updated: 2026/01/23 17:13:02 by josjimen         ###   ########.fr        #
+#    Updated: 2026/01/23 18:00:15 by josjimen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 SRCS = 	dispatcher_strategy.c \
 		ft_atol.c \
 		ft_isdigit.c \
 		ft_lstlast.c \
+		ft_memcpy.c \
 		ft_split.c \
+		ft_strlen.c \
+		ft_substr.c \
 		helpers_basic.c \
 		helpers_minmax.c \
 		helpers_range.c \
@@ -29,7 +32,7 @@ SRCS = 	dispatcher_strategy.c \
 		parse_utils.c \
 		parse.c \
 		push_swap.c \
-		sork_k_pull.c \
+		sort_k_pull.c \
 		sort_k_push.c \
 		sort_k.c \
 		sort_small_3.c \
@@ -42,15 +45,15 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -0 $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	ar -rcs $(NAME) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -rf $(OBJS)
-fclean:
-	rm -rf $(NAME)
+fclean: clean
+	rm -f $(NAME) push_swap.a
 re: fclean $(NAME)
 
 .PHONY: all clean fclean re

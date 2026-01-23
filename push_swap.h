@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 14:32:12 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 17:27:09 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include <unistd.h> 
 # include <limits.h>
 # include <stdlib.h>
-
-//int	push_swap
+# include <stddef.h>
 
 /* ===== Structure ===== */
 typedef struct s_node
@@ -40,6 +39,7 @@ void	free_stack(t_node **a);
 void	free_tokens(char **tokens);
 int		is_valid_int_string(char *s);
 int		is_duplicate(t_node *a, int value);
+int		parse_args(int argc, char **argv, t_node **a);
 
 /* ===== Primitives Ops ======*/
 void	swap_top(t_node **stack);
@@ -66,6 +66,7 @@ void	k_pull_back(t_node **a, t_node **b);
 void	sort_k(t_node **a, t_node **b);
 void	sort_small_3(t_node **a);
 void	sort_small_5(t_node **a, t_node **b);
+int		square_root(int number);
 
 /* ===== Helpers ===== */
 t_node	*ft_lstlast(t_node *lst);
@@ -79,6 +80,10 @@ int		pos_of_max_ind(t_node *b_stack, int max);
 char	**ft_split(const char *s, char c);
 int		ft_isdigit(int c);
 long	ft_atol(const char *str);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	index_stack(t_node *a);
+void	dispatcher_strategy(t_node **a, t_node **b);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
+int		ft_strlen(const char *str);
 
 #endif
