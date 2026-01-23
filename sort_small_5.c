@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:29:06 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 14:08:24 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 15:15:45 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,3 @@ void	sort_small_5(t_node **a, t_node **b)
 	while (*b)
 		pa(a, b);
 }
-

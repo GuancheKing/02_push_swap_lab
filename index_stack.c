@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 22:17:56 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 22:59:56 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 15:12:36 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	index_stack(t_node *a)
 		}
 		curr->ind = rank;
 		curr = curr->nx;
-	}		
+	}
 }

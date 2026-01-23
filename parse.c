@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 14:22:20 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/21 21:50:02 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/23 15:16:32 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 static int	process_token(char *token, t_node **a)
 {
 	long	value;
+
 	if (token == NULL)
 		return (0);
 	if (is_valid_int_string(token) == 0)
@@ -33,8 +34,8 @@ static int	process_token(char *token, t_node **a)
 /* Splits an argument string and processes each numeric token */
 static int	process_arg_string(char *s, t_node **a)
 {
-	char **tokens;
-	int 	i;
+	char	**tokens;
+	int		i;
 
 	tokens = ft_split(s, ' ');
 	if (tokens == NULL)
@@ -62,7 +63,7 @@ static int	process_arg_string(char *s, t_node **a)
 int	parse_args(int argc, char **argv, t_node **a)
 {
 	int	i;
-	
+
 	if (argc <= 1)
 		return (1);
 	i = 1;
