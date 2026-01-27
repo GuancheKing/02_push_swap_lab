@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:02:29 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 17:27:09 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:22:32 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,16 @@ typedef struct s_range
 	int	mid;
 }					t_range;
 
+typedef struct s_pull
+{
+	int	size;
+	int	max;
+	int	pos_max;
+	int	pos_prev;
+	int	cost_max;
+	int	cost_prev;
+}					t_pull;
+
 /* ======Parse Utils*/
 int		append_node(t_node **a, int value);
 void	free_stack(t_node **a);
@@ -40,6 +50,7 @@ void	free_tokens(char **tokens);
 int		is_valid_int_string(char *s);
 int		is_duplicate(t_node *a, int value);
 int		parse_args(int argc, char **argv, t_node **a);
+int		fits_in_int(const char *s);
 
 /* ===== Primitives Ops ======*/
 void	swap_top(t_node **stack);
@@ -85,5 +96,6 @@ void	index_stack(t_node *a);
 void	dispatcher_strategy(t_node **a, t_node **b);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 int		ft_strlen(const char *str);
+int		min_int(int a, int b);
 
 #endif

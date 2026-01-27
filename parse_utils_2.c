@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   parse_utils_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/21 17:22:44 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/27 10:10:49 by josjimen         ###   ########.fr       */
+/*   Created: 2026/01/27 10:21:07 by josjimen          #+#    #+#             */
+/*   Updated: 2026/01/27 10:21:59 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	ft_atol(const char *str)
+#include <limits.h>
+
+int	fits_in_int(const char *s)
 {
-	long			res;
-	int				sign;
-	unsigned int	i;
+	long	res;
+	int		sign;
+	int		i;
 
 	res = 0;
 	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
-		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (!s[i])
+		return (0);
+	if (s[i] == '+' || s[i] == '-')
 	{
-		if (str[i] == '-')
+		if (s[i++] == '-')
 			sign = -1;
-		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	if (s[i] < '0' || s[i] > '9')
+		return (0);
+	while (s[i] >= '0' && s[i] <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		if (sign == 1 && res > (INT_MAX - (s[i] - '0')) / 10)
+			return (0);
+		if (sign == -1 && res > (-(long)INT_MIN - (s[i] - '0')) / 10)
+			return (0);
+		res = res * 10 + (s[i++] - '0');
 	}
-	return (res * sign);
+	return (s[i] == '\0');
 }

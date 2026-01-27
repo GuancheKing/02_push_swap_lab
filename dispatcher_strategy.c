@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/11 19:28:03 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/22 14:45:20 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:40:44 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ void	dispatcher_strategy(t_node **a, t_node **b)
 	if (n == 2)
 	{
 		if ((*a)->ind > (*a)->nx->ind)
-		{
 			sa(a);
-			return ;
-		}
 		return ;
 	}
 	else if (n == 3)

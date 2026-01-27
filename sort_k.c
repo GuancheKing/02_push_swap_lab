@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/10 21:21:10 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 14:43:40 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:56:42 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ static int	choose_k(int n)
 	int	k;
 
 	k = square_root(n) * 7 / 5;
+	if (n <= 120 && k < 22)
+		k = 22;
+	if (n >= 400)
+		k = 59;
 	return (k);
 }
 

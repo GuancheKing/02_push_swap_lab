@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:42:33 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 14:37:30 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/27 09:23:00 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,11 @@ int	square_root(int number)
 		i++;
 	}
 	return (i - 1);
+}
+
+int	min_int(int a, int b)
+{
+	if (a < b)
+		return (a);
+	return (b);
 }

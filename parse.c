@@ -6,7 +6,7 @@
 /*   By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 14:22:20 by josjimen          #+#    #+#             */
-/*   Updated: 2026/01/23 15:16:32 by josjimen         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:24:43 by josjimen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int	process_token(char *token, t_node **a)
 	if (token == NULL)
 		return (0);
 	if (is_valid_int_string(token) == 0)
+		return (0);
+	if (fits_in_int(token) == 0)
 		return (0);
 	value = ft_atol(token);
 	if (value < INT_MIN || value > INT_MAX)

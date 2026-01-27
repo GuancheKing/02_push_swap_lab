@@ -6,7 +6,7 @@
 #    By: josjimen <josjimen@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/11 18:55:35 by josjimen          #+#    #+#              #
-#    Updated: 2026/01/23 18:00:15 by josjimen         ###   ########.fr        #
+#    Updated: 2026/01/27 10:22:50 by josjimen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = 	dispatcher_strategy.c \
 		ops_wrap_rev_rotate.c \
 		ops_wrap_rotate.c \
 		ops_wrap_swap.c \
+		parse_utils_2.c \
 		parse_utils.c \
 		parse.c \
 		push_swap.c \
